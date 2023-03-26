@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" style="-fx-background-radius: 0; -fx-background-color: transparent; -fx-border-radius: 2px 2px 2px 2px;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI_Layer.GUI_Controller">
+   <children>
+      <AnchorPane maxHeight="600.0" prefHeight="600.0" prefWidth="450.0" style="-fx-background-color: #FFDBC6;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <ImageView fitHeight="218.0" fitWidth="242.0" layoutX="81.0" layoutY="152.0">
+               <image>
+                  <Image url="@icons/login-2012644.png" />
+               </image>
+               <effect>
+                  <Glow />
+               </effect>
+            </ImageView>
+            <Text layoutX="167.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 3em; -fx-font-family: Quicksand; -fx-font-weight: bold; -fx-fill: #18023b;" text="Login">
+               <effect>
+                  <Glow />
+               </effect></Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="450.0" maxHeight="600.0" prefHeight="600.0" prefWidth="750.0" style="-fx-background-color: #F5F5F5;">
+         <children>
+            <HBox alignment="CENTER_RIGHT" layoutX="232.0" layoutY="216.0" maxWidth="-Infinity" prefHeight="61.0" prefWidth="286.0" style="-fx-background-color: #FFDBC6; -fx-border-color: #18023b; -fx-border-width: 0px 0px 2px 0px; -fx-border-radius: 20; -fx-background-radius: 20;">
+               <children>
+                  <TextField fx:id="AdminUsername" promptText="Name" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="33.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                     <image>
+                        <Image url="@icons/Name.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="232.0" layoutY="300.0" maxWidth="-Infinity" prefHeight="61.0" prefWidth="286.0" style="-fx-background-color: #FFDBC6; -fx-border-color: #18023b; -fx-border-width: 0px 0px 2px 0px; -fx-border-radius: 20; -fx-background-radius: 20;">
+               <children>
+                  <PasswordField fx:id="AdminPassword" prefHeight="31.0" prefWidth="231.0" promptText="Password" style="-fx-background-color: transparent;">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </PasswordField>
+                  <ImageView fitHeight="33.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/password-4488627.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </ImageView>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <Button layoutX="328.0" layoutY="405.0" mnemonicParsing="false" onAction="#GoToDashboard" prefWidth="95.0" style="-fx-background-color: #FFDBC6; -fx-background-radius: 100px; -fx-text-fill: #18023b;" text="Login">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Label fx:id="IncorrectPassword" alignment="CENTER" layoutX="189.0" layoutY="156.0" prefHeight="45.0" prefWidth="372.0" style="-fx-text-fill: RED; -fx-font-size: 2em;">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label fx:id="IncorrectUsername" alignment="CENTER" layoutX="190.0" layoutY="156.0" prefHeight="45.0" prefWidth="372.0" style="-fx-text-fill: RED; -fx-font-size: 2em;">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>
